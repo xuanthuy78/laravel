@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::get('breed','ExamController@listBreed');
 Route::get('listdog','ExamController@listDog');
+Route::get('scopes','ExamController@scopes');
