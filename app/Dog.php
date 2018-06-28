@@ -31,4 +31,8 @@ class Dog extends Model
 
         static::addGlobalScope(new PriceScope);
     }
+   	public function getNameAttribute($value)
+    {
+        return ucwords($value);
+    }
 }

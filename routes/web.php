@@ -17,3 +17,11 @@ Route::get('/', function () {
 Route::get('breed','ExamController@listBreed');
 Route::get('listdog','ExamController@listDog');
 Route::get('scopes','ExamController@scopes');
+Route::get('update', 'ExamController@update');
+Route::get('create', 'ExamController@create');
+Route::get('delete', 'ExamController@delete');
+Route::get('soft', function(){
+	Schema::table('breed', function ($table) {
+    $table->softDeletes();
+	});
+});

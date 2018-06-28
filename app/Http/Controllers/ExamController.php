@@ -26,4 +26,31 @@ class ExamController extends Controller
  		$dogs = Dog::all();
  		return view('exam.scopes',compact('dogs'));	
  	}
+
+ 	public function update()
+ 	{
+ 		$dog = Dog::find(2);
+ 		$dog->name = "Love";
+ 		$dog->save();
+ 		return redirect('/');
+ 	}
+ 	public function create()
+ 	{
+ 		$breed = Breed::firstOrCreate(['name'=>'Moon']);
+ 		// $breed = Breed::firstOrNew(['name'=>'Fox']);
+ 		// $breed->save();//phai co save
+ 		echo "Da them thanh cong";
+ 	}
+ 	public function delete()
+ 	{
+ 		$breed = Breed::destroy(9);
+ 		// //Deleting
+ 		// $breed = Breed::find(7);
+ 		// $breed->delete();
+ 		
+ 		echo "Ban xoa thanh xong";
+ 	}
+ 	public function restore(){
+
+ 	}
 }

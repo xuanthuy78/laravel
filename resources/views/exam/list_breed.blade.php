@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('header')
-	<h1>List Breed </h1>
+	<h1>List Breed  </h1>
 @stop
 @section('content')
 	<table class="table">
@@ -14,6 +14,7 @@
 			<td>{{$breed->name}}</td>
 		</tr>
 		@endforeach
+
 
 	</table>
 @stop
